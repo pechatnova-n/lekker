@@ -1,0 +1,129 @@
+.departments {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: rem(24px);
+  &_mb {
+    margin-bottom: rem(24px);
+  }
+  &_green {
+    background-color: #D2F6EC;
+    background-image: url("../../images/bg-1.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+  }
+  &_pink {
+    background-color: #FDE0ED;
+    background-image: url("../../images/bg-2.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+  &_orange {
+    background-color: #FFEED2;
+    background-image: url("../../images/bg-3.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+  @media#{media('<', d)} {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: rem(12px);
+    grid-row-gap: rem(12px);
+    &_green {
+
+    }
+  }
+  @media#{media('<', m)} {
+    grid-template-columns: 1fr;
+    &_pink {
+      height: rem(210px);
+    }
+  }
+
+
+  &__item {
+    border-radius: rem(24px);
+    padding: rem(32px);
+    height: rem(340px);
+    display: grid;
+    grid-template-columns: 1fr;
+    & > :last-child {
+      align-self: end;
+    }
+    @media#{media('<', d)} {
+      padding: rem(24px);
+      height: rem(210px);
+      &:last-child {
+        height: rem(139px);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(12px);
+    @media#{media('<', d)} {
+      font-size: rem(20px);
+      line-height: rem(20px);
+      margin-bottom: rem(8px);
+    }
+  }
+
+  &__text {
+    font-size: rem(24px);
+    line-height: rem(28px);
+    font-family: $rubic;
+    color: #364A46;
+    @media#{media('<', d)} {
+      font-size: rem(16px);
+      line-height: rem(18px);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(13px);
+    @media#{media('<', d)} {
+      row-gap: rem(8px);
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    column-gap: rem(16px);
+    align-items: center;
+  }
+
+  &__link {
+    font-family: $rubic;
+    color: #364A46;
+    font-size: rem(24px);
+    line-height: rem(28px);
+    border: 1px solid transparent;
+    transition: all .4s ease-in-out;
+    &:hover {
+      border-bottom: 1px solid currentColor;
+      transition: all .4s ease-in-out;
+    }
+    @media#{media('<', d)} {
+      font-size: rem(16px);
+      line-height: rem(20px);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(32px);
+    height: rem(32px);
+    border-radius: rem(8px);
+    background-color: #FFF;
+    svg {
+      width: rem(16px);
+      height: rem(16px);
+    }
+  }
+
+
+}

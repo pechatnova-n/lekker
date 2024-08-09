@@ -1,0 +1,46 @@
+mixin departments(mods)
+  -
+    const baseName = 'departments'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '_' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  section.departments.departments_mb(class=allMods)&attributes(attributes)
+    article.departments__item.departments_green
+      header.departments__title.title-32 Секретарь
+      p.departments__text Как стать умнее или избавиться от йододефицита
+      ul.departments__list
+        li.departments__list-item
+          span.departments__icon
+            +call
+          a.departments__link(href="tel:+78124485465") 8 812 448-54-65
+        li.departments__list-item
+          span.departments__icon
+            +sms
+          a.departments__link(href="mailto:help_gendir@lekker.ru") help_gendir@lekker.ru
+
+    article.departments__item.departments_pink
+      header.departments__title.title-32 Отдел продаж
+      ul.departments__list
+        li.departments__list-item
+          span.departments__icon
+            +call
+          a.departments__link(href="tel:+78127027262") 8 812 702-72-62
+        li.departments__list-item
+          span.departments__icon
+            +sms
+          a.departments__link(href="mailto:prodazha@lekker.ru") prodazha@lekker.ru
+
+    article.departments__item.departments_orange
+      header.departments__title.title-32 Отдел рекламы
+      ul.departments__list
+        li.departments__list-item
+          span.departments__icon
+            +sms
+          a.departments__link(href="mailto:reklama@lekker.ru") reklama@lekker.ru
+
