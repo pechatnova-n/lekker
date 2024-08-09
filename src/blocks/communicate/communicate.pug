@@ -1,0 +1,30 @@
+mixin communicate(mods)
+  -
+    const baseName = 'communicate'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '_' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  section.communicate(class=allMods)&attributes(attributes)
+    h2.communicate__title.title-80 Связаться с нами
+    form.communicate__form
+      .communicate__item
+        .communicate__input
+          input.communicate__inp(type="text")
+          span.communicate__hat Ваше имя
+
+        p.communicate__error Поле заполнено некорректно
+
+
+    //  input.communicate__input(type="email", placeholder="E-mail")
+      input.communicate__input(type="tel", placeholder="Телефон")
+      textarea.communicate__textarea(placeholder="Сообщение")
+      .communicate__text
+        p.communicate__info Нажимая на кнопку «Отправить» я даю согласие на условия
+          a.communicate__link политики в отношении обработки персональных данных
+        +button("Отправить", type="submit").communicate__button

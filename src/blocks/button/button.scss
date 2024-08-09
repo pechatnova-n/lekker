@@ -2,24 +2,23 @@
   position: relative;
   display: flex;
   padding: 0 rem(24px);
-  height: rem(60px);
-  border-radius: rem(8px);
-  background: var(--1, #62215b);
+  height: rem(71px);
+  border-radius: rem(16px);
+  background: #DD5799;
   justify-content: center;
   align-items: center;
   border: 1px solid transparent;
   color: #fff;
-  font-family: TT Rounds Neue;
-  font-size: rem(16px);
+  font-family: $rubic;
+  font-size: rem(18px);
   font-weight: 620;
   text-align: center;
   cursor: pointer;
-  text-transform: uppercase;
   transition: $transition;
   white-space: nowrap;
 
   &:hover {
-    background: var(--2, #c19f86);
+    background: #C7397F;
   }
   &:disabled {
     background: #f0e7ef;
