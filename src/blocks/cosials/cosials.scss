@@ -12,6 +12,7 @@
   &__title {
     @media#{media('<', d)} {
       align-self: flex-start;
+      font-size: rem(20px);
     }
   }
 
@@ -55,6 +56,10 @@
     @media#{media('<', d)} {
       width: rem(240px);
       height: rem(240px);
+    }
+    @media#{media('<', m)} {
+      width: rem(104px);
+      height: rem(104px);
     }
   }
 }
