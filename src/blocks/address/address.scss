@@ -1,0 +1,114 @@
+.address {
+  position: relative;
+  height: rem(600px);
+  display: grid;
+  grid-template-columns: rem(450px) auto;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: space-between;
+  grid-column-gap: rem(24px);
+  &_mb {
+    margin-bottom: rem(148px);
+  }
+  @media#{media('<', d)} {
+    height: rem(332px);
+    grid-template-columns: rem(177px) auto;
+    grid-column-gap: rem(13px);
+    &_mb {
+      margin-bottom: rem(48px);
+    }
+  }
+  @media#{media('<', m)} {
+    grid-template-columns: 1fr;
+    grid-row-gap: rem(12px);
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: rem(12px);
+    @media#{media('<', d)} {
+      row-gap: rem(12px);
+    }
+    @media#{media('<', m)} {
+      display: grid;
+      grid-column-gap: rem(12px);
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #00AA88;
+    border-radius: rem(24px);
+    padding: rem(32px);
+    color: #FFF;
+    height: rem(288px);
+    &_blue {
+      background: #0097D4;
+    }
+    @media#{media('<', d)} {
+      border-radius: rem(12px);
+      padding: rem(12px) rem(20px) rem(12px) rem(12px);
+      height: rem(160px);
+    }
+  }
+  &__title {
+    margin-bottom: rem(20px);
+    color: #FFF;
+    @media#{media('<', d)} {
+      font-size: rem(20px);
+      line-height: rem(20px);
+      margin-bottom: rem(12px);
+    }
+  }
+  &__txt {
+    font-family: $rubic;
+    font-size: rem(18px);
+    line-height: rem(24px);
+    color: #FFF;
+    @media#{media('<', d)} {
+      font-size: rem(12px);
+      line-height: rem(15px);
+    }
+  }
+  &__index {
+    @media#{media('<', d)} {
+      display: block;
+    }
+  }
+  &__days {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
+    color: #FFF;
+    font-family: $rubic;
+    font-size: rem(18px);
+    line-height: rem(28px);
+    text-transform: uppercase;
+    justify-self: flex-end;
+    @media#{media('<', d)} {
+      font-size: rem(12px);
+      line-height: rem(15px);
+    }
+  }
+
+  &__map {
+    grid-row: span 2;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #F0F0F0;
+    border-radius: rem(24px);
+    overflow: hidden;
+    picture {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media#{media('<', d)} {
+      border-radius: rem(12px);
+    }
+  }
+}

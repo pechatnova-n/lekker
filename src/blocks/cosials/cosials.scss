@@ -3,10 +3,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &_mb {
+    margin-bottom: rem(24px);
+  }
   @media#{media('<', d)} {
     flex-direction: column;
     justify-content: space-between;
     row-gap: rem(12px);
+    &_mb {
+      margin-bottom: rem(48px);
+    }
   }
 
   &__title {

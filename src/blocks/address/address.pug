@@ -1,0 +1,26 @@
+mixin address(mods)
+  -
+    const baseName = 'address'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '_' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  section.address.address_mb(class=allMods)&attributes(attributes)
+    .address__cards
+      article.address__item
+        h2.address__title.title-32 Офис
+        address.address__txt #[<span class="address__index">194044,</span>] Санкт-Петербург, Беловодский переулок, 6
+        span.address__days пн-пт: 9–17:30
+
+      article.address__item.address__item_blue
+        h2.address__title.title-32 Производство
+        address.address__txt #[<span class="address__index">194044,</span>] Санкт-Петербург, пер. Зеленков, 6, лит. А, корп. 1, пом. 11
+        span.address__days пн-пт: 9–17:30
+
+    .address__map
+      +picture('map.jpg')
