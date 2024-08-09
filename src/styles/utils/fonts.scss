@@ -1,14 +1,25 @@
 @font-face {
-  font-family: 'TT Rounds Neue';
+  font-family: 'TT Firs Neue';
+  src: url('../fonts/TTFirsNeue-DemiBold.woff2') format('woff2');
+  font-weight: 600;
   font-style: normal;
-  font-weight: 620;
   font-display: swap;
-  src: url('../fonts/ttroundsneue-demibold.woff') format('woff');
 }
+
 @font-face {
-  font-family: 'TT Rounds Neue';
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Medium.woff2') format('woff2');
+  font-weight: 500;
   font-style: normal;
-  font-weight: 420;
   font-display: swap;
-  src: url('../fonts/ttroundsneue-regular.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
