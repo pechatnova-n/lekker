@@ -1,0 +1,31 @@
+.bread-crumbs {
+  position: relative;
+  display: flex;
+  column-gap: rem(31px);
+  padding: rem(24px) 0;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: rem(8px);
+    svg {
+      width: rem(16px);
+      height: rem(16px);
+    }
+  }
+  &__link {
+    font-size: rem(16px);
+    line-height: rem(14px);
+    color: #364A46;
+    font-family: $firs;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  &__span {
+    font-size: rem(16px);
+    line-height: rem(14px);
+    font-family: $firs;
+    text-transform: uppercase;
+    color: #00AA88;
+  }
+}

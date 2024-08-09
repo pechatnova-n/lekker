@@ -1,0 +1,19 @@
+mixin bread-crumbs(mods)
+  -
+    const baseName = 'bread-crumbs'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '_' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  ul.bread-crumbs(class=allMods)&attributes(attributes)
+    li.bread-crumbs__item
+      a.bread-crumbs__link Главная
+      +ic-arr-def
+    li.bread-crumbs__item
+      span.bread-crumbs__span Контакты
+      +ic-arr-act
