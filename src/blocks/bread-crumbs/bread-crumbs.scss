@@ -1,3 +1,5 @@
+$comp: &;
+
 .bread-crumbs {
   position: relative;
   display: flex;
@@ -20,12 +22,20 @@
     font-family: $firs;
     text-transform: uppercase;
     cursor: pointer;
-  }
-  &__span {
-    font-size: rem(16px);
-    line-height: rem(14px);
-    font-family: $firs;
-    text-transform: uppercase;
-    color: #00AA88;
+    &:hover {
+      color: #00AA88;
+      & + svg * {
+        stroke: #00AA88;
+      }
+    }
+    svg * {
+      stroke: #364A46;
+    }
+    &_active {
+      color: #00AA88;
+      & + svg * {
+        stroke: #00AA88;
+      }
+    }
   }
 }
