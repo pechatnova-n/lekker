@@ -15,15 +15,27 @@ mixin communicate(mods)
     form.communicate__form
       .communicate__item
         .communicate__input
-          input.communicate__inp(type="text")
-          span.communicate__hat Ваше имя
+          input.communicate__inp#name-field(type="text", required)
+          label.communicate__placeholder(for="name-field") Ваше имя
+        p.communicate__err Поле заполнено некорректно
+      .communicate__item
+        .communicate__input.communicate__input-error
+          input.communicate__inp#email-field(type="text", required)
+          label.communicate__placeholder(for="email-field") E-mail
+        p.communicate__err Поле заполнено некорректно
+      .communicate__item
+        .communicate__input
+          input.communicate__inp#tel-field(type="text", required)
+          label.communicate__placeholder(for="tel-field") Телефон
+        p.communicate__err Поле заполнено некорректно
+      .communicate__item
+        .communicate__input.communicate__input-textarea
+          textarea.communicate__textarea#text-field(required)
+          label.communicate__placeholder(for="text-field") Сообщение
+        p.communicate__err Поле заполнено некорректно
 
-        p.communicate__error Поле заполнено некорректно
 
 
-    //  input.communicate__input(type="email", placeholder="E-mail")
-      input.communicate__input(type="tel", placeholder="Телефон")
-      textarea.communicate__textarea(placeholder="Сообщение")
       .communicate__text
         p.communicate__info Нажимая на кнопку «Отправить» я даю согласие на условия
           a.communicate__link политики в отношении обработки персональных данных
