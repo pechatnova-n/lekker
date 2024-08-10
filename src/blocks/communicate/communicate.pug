@@ -29,7 +29,7 @@ mixin communicate(mods)
           label.communicate__placeholder(for="tel-field") Телефон
         p.communicate__err Поле заполнено некорректно
       .communicate__item
-        .communicate__input.communicate__input-textarea
+        .communicate__input
           textarea.communicate__textarea#text-field(required)
           label.communicate__placeholder(for="text-field") Сообщение
         p.communicate__err Поле заполнено некорректно
@@ -38,5 +38,5 @@ mixin communicate(mods)
 
       .communicate__text
         p.communicate__info Нажимая на кнопку «Отправить» я даю согласие на условия
-          a.communicate__link политики в отношении обработки персональных данных
+          a.communicate__link &nbsp;политики в отношении обработки персональных данных
         +button("Отправить", type="submit").communicate__button

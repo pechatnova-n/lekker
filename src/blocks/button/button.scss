@@ -26,4 +26,9 @@
     color: var(--1, #62215b);
     opacity: 0.3;
   }
+  @media#{media('<', d)} {
+    font-size: rem(13px);
+    height: rem(47px);
+    border-radius: rem(12px);
+  }
 }

@@ -3,8 +3,67 @@
   position: relative;
   width: rem(924px);
   margin: 0 auto;
+  &:before {
+    position: absolute;
+    top: rem(71px);
+    left: rem(-407px);
+    display: block;
+    width: rem(263px);
+    height: rem(261px);
+    content: "";
+    background:  url("/images/communic-1.svg") 0 0 no-repeat;
+    background-size: contain;
+  }
+  &:after {
+    position: absolute;
+    bottom: rem(41px);
+    right: rem(-484px);
+    display: block;
+    width: rem(380px);
+    height: rem(309px);
+    content: "";
+    background:  url("/images/communic-2.svg") 0 0 no-repeat;
+    background-size: 100% 100%;
+  }
+
+  @media#{media('<', d)} {
+    width: rem(366px);
+    &:before {
+      top: 0;
+      left: rem(-157px);
+      width: rem(104px);
+      height: rem(115px);
+    }
+    &:after {
+      bottom: rem(100px);
+      right: rem(-200px);
+      width: rem(183px);
+      height: rem(141px);
+    }
+  }
+  @media#{media('<', m)} {
+    width: rem(351px);
+    &:before {
+      top: rem(-30px);
+      left: auto;
+      right: rem(70px);
+      width: rem(29px);
+      height: rem(34px);
+    }
+    &:after {
+      top: rem(-25px);
+      right: 0;
+      width: rem(78px);
+      height: rem(62px);
+    }
+  }
   &__title {
     margin-bottom: rem(48px);
+    @media#{media('<', d)} {
+      font-size: rem(26px);
+      line-height: rem(26px);
+      margin-bottom: rem(24px);
+    }
   }
   &__form {
     width: 100%;
@@ -20,9 +79,24 @@
   &__input {
     position: relative;
     font-size: rem(20px);
+    @media#{media('<', d)} {
+      font-size: rem(14px);
+    }
+
+    #{$comp}__inp {
+      height: rem(80px);
+      @media#{media('<', d)} {
+        height: rem(50px);
+      }
+    }
+    #{$comp}__textarea {
+      height: rem(181px);
+      @media#{media('<', d)} {
+        height: rem(161px);
+      }
+    }
     #{$comp}__inp, #{$comp}__textarea {
       width: 100%;
-      height: 100%;
       background-color: #F3F3F3;
       border: 1px solid #F3F3F3;
       font-size: rem(20px);
@@ -32,6 +106,11 @@
       padding: rem(28px) rem(24px);
       border-radius: rem(16px);
       appearance: none;
+      @media#{media('<', d)} {
+        font-size: rem(14px);
+        line-height: rem(18px);
+        padding: rem(16px) rem(31px) rem(16px) rem(16px);
+      }
     }
 
     #{$comp}__inp:focus, #{$comp}__inp:valid,
@@ -39,6 +118,9 @@
       padding: rem(37px) rem(24px) rem(19px);
       background-color: #FFF;
       border: 1px solid #00AA88;
+      @media#{media('<', d)} {
+        padding: rem(22px) rem(31px) rem(10px) rem(16px);
+      }
     }
 
     #{$comp}__inp:focus + #{$comp}__placeholder,
@@ -51,11 +133,15 @@
       top: rem(18px);
       transform: translateY(0);
       padding: 0 rem(24px);
+      @media#{media('<', d)} {
+        top: 0;
+        font-size: rem(12px);
+        line-height: rem(17px);
+        padding: rem(8px) rem(31px) 0 rem(16px);
+      }
     }
 
-    &-textarea {
-      height: rem(181px);
-    }
+
     &-error {
       #{$comp}__inp {
         border: 1px solid #FF0000;
@@ -83,9 +169,12 @@
     font-family: $rubic;
     padding: rem(28px) rem(24px);
     color: #364A46;
-  }
-  &__inp {
-
+    @media#{media('<', d)} {
+      height: rem(50px);
+      font-size: rem(14px);
+      line-height: rem(18px);
+      padding: rem(16px) rem(31px) rem(16px) rem(16px);
+    }
   }
   &__err {
     display: none;
@@ -105,12 +194,20 @@
     align-items: center;
     column-gap: rem(120px);
     padding-top: rem(16px);
+    @media#{media('<', d)} {
+      flex-direction: column;
+      row-gap: rem(28px);
+      padding-top: rem(12px);
+    }
   }
   &__info {
     font-size: rem(14px);
     line-height: rem(16px);
     color: #364A46;
     font-family: $rubic;
+    @media#{media('<', d)} {
+      font-size: rem(12px);
+    }
   }
   &__link {
     font-size: rem(14px);
@@ -121,8 +218,21 @@
       text-decoration: underline;
       cursor: pointer;
     }
+    @media#{media('<', d)} {
+      font-size: rem(12px);
+    }
+    @media#{media('<', m)} {
+      display: inline;
+    }
   }
   &__button {
     width: rem(332px);
+    @media#{media('<', d)} {
+      width: 100%;
+    }
+  }
+
+  @media#{media('<', d)} {
+
   }
 }
