@@ -3,33 +3,41 @@
         {name: "О компании", to: "/"},
         {name: "Новости", to: "/"},
         {name: "Контакты", to: "/"},
-        {name: "Где купитьи", to: "/"},
+        {name: "Где купить", to: "/"},
   ];
 
 footer.footer
   header.footer__main
     a.footer__logo(href="/")
+      +logo
     .footer__image
-    ul.footer__menu
-      each el in list
-        li.footer__item
-          a.footer__link(href=el.to) #{el.name}
+      +boy
+    nav.footer__menu
+      ul.footer__list
+        each el in list
+          li.footer__menu-item
+            a.footer__menu-link(href=el.to) #{el.name}
     .footer__contacts
-      a.footer__contacts-item(href="tel:88124485465") 8 812 448-54-65
-      a.footer__contacts-item(href="mailto:info@lekker.ru") info@lekker.ru
+      a.footer__contacts-item(href="tel:88124485465", target='_blank') 8 812 448-54-65
+      a.footer__contacts-item(href="mailto:info@lekker.ru", target='_blank') info@lekker.ru
     ul.footer__cosials
-      li
-        a.footer__cosial-item(href="#")
-      li
-        a.footer__cosial-item(href="#")
-      li
-        a.footer__cosial-item(href="#")
-      li
-        a.footer__cosial-item(href="#")
+      li.footer__cosial-item
+        a.footer__cosial-link(href="#")
+          +vk
+      li.footer__cosial-item
+        a.footer__cosial-link(href="#")
+          +ok
+      li.footer__cosial-item
+        a.footer__cosial-link(href="#")
+          +youtube
+      li.footer__cosial-item
+        a.footer__cosial-link(href="#")
+          +rutube
     +button("Стать партнером").footer__btn
     p.footer__copy © 2002-2023 ООО «Леккер»
-    p.footer__pocicy Политика в отношении обработки персональных данных
-    p.footer__made Сделано в CloudMill
+    a.footer__policy(href="#" target='_blank') Политика в отношении обработки персональных данных
+    p.footer__made Сделано в
+      a.footer__producer(href="#" target="_blank") CloudMill
 
 
-  footer ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ, НЕОБХОДИМО ПРОКОНСУЛЬТИРОВАТЬСЯ СО СПЕЦИАЛИСТОМ
+  footer.footer__advice ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ, НЕОБХОДИМО ПРОКОНСУЛЬТИРОВАТЬСЯ СО СПЕЦИАЛИСТОМ

@@ -59,7 +59,11 @@
       color: #F7931E;
     }
     svg {
-
+      width: rem(66px);
+      height: rem(59px);
+    }
+    svg path {
+      fill: currentColor;
     }
     @media#{media('<', d)} {
       width: rem(240px);

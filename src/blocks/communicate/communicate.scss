@@ -2,7 +2,7 @@
   $comp: &;
   position: relative;
   width: rem(924px);
-  margin: 0 auto;
+  margin: 0 auto rem(148px);
   &:before {
     position: absolute;
     top: rem(71px);
