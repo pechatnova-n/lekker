@@ -1,4 +1,26 @@
+-
+  var list = [
+    {name: "О компании", to: "/"},
+    {name: "Новости", to: "/"},
+    {name: "Где купить", to: "/"},
+    {name: "Контакты", to: "/"},
+  ];
 
 header.header
-  .inner
-    p Header
+  .header__inner
+    a.header__logo(href="/")
+      +logo
+    .header__btns
+      +button("Продукция").header__btn
+      a.header__search(href="#")
+        +ic-search
+    nav.header__menu
+      a.header__burger
+        +burger
+      ul.header__list
+        each el in list
+          li.header__item
+            a.header__link(href=el.to) #{el.name}
+    a.header__phone(href="tel:88124485465") 8 812 448-54-65
+      +ic-tel
+    a.header__become-partners(href="#") Стать партнером

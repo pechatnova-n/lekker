@@ -3,4 +3,11 @@
   &_mb {
     margin-bottom: rem(48px);
   }
+  @media#{media('<', d)} {
+    font-size: rem(48px);
+    line-height: rem(43px);
+    &_mb {
+      margin-bottom: rem(24px);
+    }
+  }
 }
