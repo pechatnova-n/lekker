@@ -97,15 +97,15 @@
 
   &__map {
     grid-row: span 2;
-    width: 100%;
-    height: 100%;
     border: 2px solid #F0F0F0;
     border-radius: rem(24px);
     overflow: hidden;
-    picture {
-      width: 100%;
+    img {
+      display: block;
       height: 100%;
+      width: 100%;
       object-fit: cover;
+      overflow: hidden;
     }
     @media#{media('<', d)} {
       border-radius: rem(12px);
