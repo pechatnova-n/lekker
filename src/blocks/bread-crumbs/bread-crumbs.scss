@@ -2,13 +2,17 @@ $comp: &;
 
 .bread-crumbs {
   position: relative;
-  display: flex;
-  column-gap: rem(31px);
   padding: rem(24px) 0;
   @media#{media('<', d)} {
     padding: rem(12px) 0;
     column-gap: rem(16px);
   }
+
+  &__list {
+    display: flex;
+    column-gap: rem(31px);
+  }
+
   &__item {
     display: flex;
     justify-content: space-between;

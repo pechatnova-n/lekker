@@ -61,7 +61,6 @@
   }
   &__image {
     grid-area: image;
-    justify-self: center;
     width: rem(134px);
     height: rem(218px);
     svg {
@@ -71,6 +70,7 @@
     @media#{media('<', d)} {
       width: rem(80px);
       height: rem(130px);
+      justify-self: center;
     }
   }
 

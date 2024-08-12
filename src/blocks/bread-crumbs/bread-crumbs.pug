@@ -10,10 +10,11 @@ mixin bread-crumbs(mods)
       allMods = allMods.trim()
     }
 
-  ul.bread-crumbs(class=allMods)&attributes(attributes)
-    li.bread-crumbs__item
-      a.bread-crumbs__link Главная
-      +ic-arr-def
-    li.bread-crumbs__item
-      a.bread-crumbs__link.bread-crumbs__link_active Контакты
-      +ic-arr-act
+  nav.bread-crumbs(class=allMods)&attributes(attributes)
+    ul.bread-crumbs__list
+      li.bread-crumbs__item
+        a.bread-crumbs__link Главная
+        +ic-arr-def
+      li.bread-crumbs__item
+        a.bread-crumbs__link.bread-crumbs__link_active Контакты
+        +ic-arr-act

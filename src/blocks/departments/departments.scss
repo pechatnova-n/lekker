@@ -18,7 +18,6 @@
     background-image: url("../../images/bg-2.png");
     background-position: bottom right;
     background-repeat: no-repeat;
-
   }
   &_orange {
     background-color: #FFEED2;
@@ -31,13 +30,15 @@
     grid-column-gap: rem(12px);
     grid-row-gap: rem(12px);
     &_green {
-
+      background-size: auto 66%;
     }
     &_pink {
-
+      background-size: auto 83%;
+      background-position: center right;
     }
     &_orange {
-
+      background-size: auto 93%;
+      background-position: bottom right;
     }
   }
   @media#{media('<', m)} {

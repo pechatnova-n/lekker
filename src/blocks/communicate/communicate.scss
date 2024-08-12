@@ -42,6 +42,7 @@
     }
   }
   @media#{media('<', m)} {
+    margin: 0 auto rem(48px);
     width: rem(351px);
     &:before {
       top: rem(-30px);

@@ -97,6 +97,7 @@
     height: rem(71px);
     background-color: #F3F3F3;
     border-radius: rem(16px);
+    transition: background-color 0.9s ease;
     &:hover {
       background-color: #DD5799;
       svg * {
@@ -173,6 +174,7 @@
     line-height: rem(21px);
     font-weight: 600;
     color: #364A46;
+    transition: background-color 0.9s ease;
     svg {
       display: none;
     }
@@ -216,6 +218,7 @@
     padding: rem(25px) rem(32px);
     background-color: #F4F4F4;
     border-radius: rem(16px);
+    transition: background-color 0.9s ease;
     &:hover {
       background-color: #DD5799;
       color: #FFF;
