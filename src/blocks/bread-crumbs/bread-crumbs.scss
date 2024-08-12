@@ -5,6 +5,10 @@ $comp: &;
   display: flex;
   column-gap: rem(31px);
   padding: rem(24px) 0;
+  @media#{media('<', d)} {
+    padding: rem(12px) 0;
+    column-gap: rem(16px);
+  }
   &__item {
     display: flex;
     justify-content: space-between;
@@ -35,6 +39,15 @@ $comp: &;
       color: #00AA88;
       & + svg * {
         stroke: #00AA88;
+      }
+    }
+    @media#{media('<', d)} {
+      font-size: rem(10px);
+      line-height: rem(9px);
+      column-gap: rem(6px);
+      svg {
+        width: rem(14px);
+        height: rem(14px);
       }
     }
   }
