@@ -80,20 +80,26 @@
   &__input {
     position: relative;
     font-size: rem(20px);
-    @media#{media('<', d)} {
-      font-size: rem(14px);
+    transition: all .3s ease-in-out;
+    &_big {
+      #{$comp}__placeholder {
+        top: 0;
+        transform: translateY(0);
+      }
+    }
+    &-error {
+      #{$comp}__inp {
+        border: 1px solid #FF0000;
+      }
+    }
+    &-error + #{$comp}__err {
+      display: block;
     }
 
     #{$comp}__inp {
       height: rem(80px);
       @media#{media('<', d)} {
         height: rem(50px);
-      }
-    }
-    #{$comp}__textarea {
-      height: rem(181px);
-      @media#{media('<', d)} {
-        height: rem(161px);
       }
     }
     #{$comp}__inp, #{$comp}__textarea {
@@ -142,19 +148,17 @@
       }
     }
 
-
-    &-error {
-      #{$comp}__inp {
-        border: 1px solid #FF0000;
-      }
+    @media#{media('<', d)} {
+      font-size: rem(14px);
     }
-    &-error + #{$comp}__err {
-      display: block;
-    }
-
   }
   &__textarea {
     resize: none;
+    height: rem(181px);
+    @media#{media('<', d)} {
+      height: rem(161px);
+    }
+
   }
   &__placeholder {
     position: absolute;
@@ -170,6 +174,7 @@
     font-family: $rubic;
     padding: rem(28px) rem(24px);
     color: #364A46;
+    transition: all .3s ease-in-out;
     @media#{media('<', d)} {
       height: rem(50px);
       font-size: rem(14px);
@@ -186,9 +191,6 @@
     font-family: $rubic;
   }
 
-  &__textarea {
-
-  }
   &__text {
     display: flex;
     justify-content: space-between;

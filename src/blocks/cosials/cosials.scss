@@ -68,10 +68,18 @@
     @media#{media('<', d)} {
       width: rem(240px);
       height: rem(240px);
+      svg {
+        width: rem(42px);
+        height: rem(42px);
+      }
     }
     @media#{media('<', m)} {
       width: rem(104px);
       height: rem(104px);
+      svg {
+        width: rem(31px);
+        height: rem(28px);
+      }
     }
   }
 }

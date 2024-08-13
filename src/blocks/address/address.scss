@@ -69,6 +69,7 @@
     font-size: rem(18px);
     line-height: rem(24px);
     color: #FFF;
+    font-style: normal;
     @media#{media('<', d)} {
       font-size: rem(12px);
       line-height: rem(15px);
