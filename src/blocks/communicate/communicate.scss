@@ -81,12 +81,6 @@
     position: relative;
     font-size: rem(20px);
     transition: all .3s ease-in-out;
-    &_big {
-      #{$comp}__placeholder {
-        top: 0;
-        transform: translateY(0);
-      }
-    }
     &-error {
       #{$comp}__inp {
         border: 1px solid #FF0000;
@@ -138,13 +132,12 @@
       line-height: rem(17px);
       color: #364A46;
       top: rem(18px);
-      transform: translateY(0);
-      padding: 0 rem(24px);
+      left: rem(24px);
       @media#{media('<', d)} {
-        top: 0;
+        top: rem(8px);
+        left: rem(16px);
         font-size: rem(12px);
         line-height: rem(17px);
-        padding: rem(8px) rem(31px) 0 rem(16px);
       }
     }
 
@@ -158,28 +151,24 @@
     @media#{media('<', d)} {
       height: rem(161px);
     }
-
   }
   &__placeholder {
     position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
+    left: rem(24px);
+    top: rem(28px);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: rem(20px);
     line-height: rem(23px);
     font-family: $rubic;
-    padding: rem(28px) rem(24px);
     color: #364A46;
     transition: all .3s ease-in-out;
     @media#{media('<', d)} {
-      height: rem(50px);
+      top: rem(16px);
+      left: rem(16px);
       font-size: rem(14px);
       line-height: rem(18px);
-      padding: rem(16px) rem(31px) rem(16px) rem(16px);
     }
   }
   &__err {
@@ -217,8 +206,10 @@
     line-height: rem(16px);
     font-family: $rubic;
     color: #00AA88;
+    border-bottom: 1px solid transparent;
+    transition: border 0.4s ease-in-out;
     &:hover {
-      text-decoration: underline;
+      border-bottom: 1px solid currentColor;
       cursor: pointer;
     }
     @media#{media('<', d)} {
